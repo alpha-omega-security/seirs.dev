@@ -1,0 +1,23 @@
+index.html
+  s_96534dd81c07f7::t_963f7c4a91d7a1 65-66,145-146,159,163,167,171,187,194,201,208,215,222,229,236,243,250,257,264,304
+role.html
+  s_96534dd81c07f7::t_0fbcb89e7487cb 174
+style.css
+  s_96534dd81c07f7::t_cf608779dce4c1 109-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3f313a19f8839b91ea3962d51599d036cdd7be38",
+  "prompts": {},
+  "sessions": {
+    "s_96534dd81c07f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbb878e0-ed0f-47df-a772-c58123563d0b",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Mirko Swillus <mechko@mk0.eu>"
+    }
+  }
+}
