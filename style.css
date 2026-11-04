@@ -106,7 +106,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
 /* Stories */
 .story h3 a { color: var(--text); }
 .story h3 a:hover { color: var(--accent-strong); text-decoration: none; }
-.story-more { margin-top: auto; font-size: 0.95rem; }
+.story-by { color: var(--text-muted); font-size: 0.85rem; margin-top: auto; margin-bottom: 0.25rem; }
+.story-more { font-size: 0.95rem; }
 .story { display: flex; flex-direction: column; }
 .story-eco { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.4rem; }
 
