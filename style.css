@@ -1,0 +1,138 @@
+:root {
+  --bg: #2f3133;
+  --bg-elev: #3a3c3f;
+  --bg-elev-2: #44474a;
+  --text: #f1f2f0;
+  --text-muted: #b8bbb6;
+  --accent: #a8d08d;
+  --accent-strong: #c3e3ad;
+  --line: #4d5054;
+  --max: 1100px;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-strong); text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5em; font-weight: 700; }
+h2 { font-size: 2rem; color: var(--accent); }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1em; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--bg-elev-2); padding: 0.1em 0.35em; border-radius: 4px; }
+
+/* Header */
+.site-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  max-width: var(--max); margin: 0 auto; padding: 1.25rem 1.5rem;
+}
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text); font-weight: 700; font-size: 1.2rem; }
+.brand:hover { text-decoration: none; }
+.brand-logo { height: 40px; width: auto; display: block; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.site-nav a { color: var(--text-muted); font-size: 0.95rem; }
+.site-nav a:hover { color: var(--text); text-decoration: none; }
+
+/* Layout */
+main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 4rem 0; border-top: 1px solid var(--line); }
+.section-intro { max-width: 46rem; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
+
+/* Hero */
+.hero { padding: 5rem 0 5rem; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
+.hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); margin-bottom: 0.25rem; letter-spacing: -0.02em; }
+.subtitle { font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 600; color: var(--accent); margin-bottom: 1.25rem; }
+.lede { max-width: 42rem; font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* Buttons */
+.btn {
+  display: inline-block; padding: 0.7rem 1.3rem; border-radius: 999px; font-weight: 600;
+  border: 1px solid transparent; transition: background 0.15s, color 0.15s;
+}
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--accent); color: #1f2a18; }
+.btn-primary:hover { background: var(--accent-strong); color: #1f2a18; }
+.btn-ghost { border-color: var(--accent); color: var(--accent); }
+.btn-ghost:hover { background: rgba(168, 208, 141, 0.12); color: var(--accent-strong); }
+
+/* Grids and cards */
+.grid { display: grid; gap: 1.25rem; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card {
+  background: var(--bg-elev); border-radius: var(--radius); padding: 1.5rem;
+  border: 1px solid var(--line);
+}
+.card p:last-child { margin-bottom: 0; }
+.card .btn { margin-top: 0.5rem; }
+.card h3 { color: var(--text); }
+.num { display: block; color: var(--accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+
+/* Tag cloud */
+.tag-cloud { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-cloud li {
+  padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.9rem;
+  border: 1px solid var(--accent); color: var(--accent);
+}
+
+/* Ecosystems */
+.eco-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.eco-list li {
+  background: var(--accent); color: #1f2a18; font-weight: 600;
+  padding: 0.6rem 1.25rem; border-radius: 999px;
+}
+
+/* Stats */
+.stats { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.stat { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+.stat-value { display: block; font-size: 2.4rem; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.stat-label { display: block; color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem; }
+
+/* Stories */
+.story h3 a { color: var(--text); }
+.story h3 a:hover { color: var(--accent-strong); text-decoration: none; }
+.story-more { margin-top: auto; font-size: 0.95rem; }
+.story { display: flex; flex-direction: column; }
+.story-eco { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.4rem; }
+
+/* Principles */
+.principles div { color: var(--text-muted); padding: 1rem 0; border-top: 1px solid var(--line); }
+.principles strong { color: var(--text); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); margin-top: 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; padding: 2rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; }
+.footer-inner p { margin-bottom: 0.4rem; }
+
+/* Role page */
+.doc { max-width: 46rem; padding: 3rem 0 4rem; }
+.doc h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.doc h2 { font-size: 1.5rem; margin-top: 2.5rem; }
+.doc h3 { margin-top: 1.5rem; color: var(--text); }
+.doc ul, .doc ol { padding-left: 1.4rem; }
+.doc li { margin-bottom: 0.4rem; }
+.doc .meta { color: var(--text-muted); margin-bottom: 2rem; }
+.doc .callout { background: var(--bg-elev); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; border-radius: 0 var(--radius) var(--radius) 0; margin: 1.5rem 0; }
+.doc .callout p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .section { padding: 3rem 0; }
+  .hero { padding: 3rem 0; }
+}
+.footer-note { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.9rem; }
