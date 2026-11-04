@@ -1,0 +1,27 @@
+README.md
+  s_96534dd81c07f7::t_1f6ea86092d6af 1-13
+favicon.svg
+  s_96534dd81c07f7::t_8a1a2ca60dc9d6 1
+index.html
+  s_96534dd81c07f7::t_4f47eeaaccda22 1-267
+role.html
+  s_96534dd81c07f7::t_c2c70f0a5d5a3a 1-184
+style.css
+  s_96534dd81c07f7::t_7b5820bb6b8365 1-132
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a3e5d7946b56c86a98b576e41a1a4d48a38f408e",
+  "prompts": {},
+  "sessions": {
+    "s_96534dd81c07f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbb878e0-ed0f-47df-a772-c58123563d0b",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Mirko Swillus <mechko@mk0.eu>"
+    }
+  }
+}
