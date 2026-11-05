@@ -1,0 +1,19 @@
+role.html
+  s_96534dd81c07f7::t_00304fe783b8a1 7,31,35,166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "44d26c2a2e7e254f2d5cff00a5540c2e00c77a31",
+  "prompts": {},
+  "sessions": {
+    "s_96534dd81c07f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbb878e0-ed0f-47df-a772-c58123563d0b",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Mirko Swillus <mechko@mk0.eu>"
+    }
+  }
+}
