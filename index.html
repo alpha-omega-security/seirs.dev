@@ -125,7 +125,7 @@
     </p>
     <ul class="eco-list">
       <li>Rust</li>
-      <li>PHP</li>
+      <li class="eco-has-pop"><button type="button" class="eco-btn" popovertarget="seir-php" aria-haspopup="dialog">PHP</button></li>
       <li>JavaScript &amp; Node.js</li>
       <li>Ruby</li>
       <li>Perl / CPAN</li>
@@ -136,6 +136,21 @@
       <li>Linux Kernel</li>
       <li>OSTIF</li>
     </ul>
+
+    <div id="seir-php" class="pop" popover role="dialog" aria-labelledby="seir-php-name">
+      <button type="button" class="pop-close" popovertarget="seir-php" popovertargetaction="hide" aria-label="Close">&times;</button>
+      <p class="story-eco">PHP &middot; The PHP Foundation</p>
+      <h3 id="seir-php-name">Volker Dusch</h3>
+      <p class="pop-role">PHP Ecosystem Security Team Lead</p>
+      <p>Volker is one of the PHP 8.5 release managers and has attended or spoken at more than 100 PHP conferences over the last 20 years. He helped maintain PHPUnit, has worked on language RFCs, and builds PHP performance and monitoring tooling at Tideways.</p>
+      <p>Got anything we can help with? Get in touch!</p>
+      <ul class="pop-links">
+        <li><a href="#" data-contact data-show data-u="reklov" data-d="noitadnuof.phpeht">volker [at] thephp [dot] foundation</a></li>
+        <li><a href="https://phpc.social/@edorian" rel="me noopener">Mastodon</a></li>
+        <li><a href="https://www.linkedin.com/in/volker-dusch/" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a class="btn btn-ghost" href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#meet-volker">Read the announcement &rarr;</a>
+    </div>
   </section>
 
   <section id="impact" class="section">
@@ -259,10 +274,10 @@
       </article>
       <article class="card story">
         <p class="story-eco">PHP</p>
-        <h3><a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Announcing the Ecosystem Security Team at The PHP Foundation</a></h3>
-        <p>The PHP Foundation creates an Ecosystem Security Team to triage reports, disclose responsibly and build discovery and remediation tooling, led by a full-time SEIR for six months.</p>
-        <p class="story-by">By Elizabeth Barron, The PHP Foundation</p>
-        <p class="story-more"><a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Read the post &rarr;</a></p>
+        <h3><a href="https://thephp.foundation/blog/2026/08/19/so-you-received-a-security-report-now-what/">So You Received a Security Report. Now What?</a></h3>
+        <p>The PHP Foundation's Ecosystem Security Team walks maintainers through handling a private vulnerability report: triage, safe reproduction, a private fix and a GitHub Security Advisory that Composer tooling can match.</p>
+        <p class="story-by">By Sebastian Bergmann, The PHP Foundation</p>
+        <p class="story-more"><a href="https://thephp.foundation/blog/2026/08/19/so-you-received-a-security-report-now-what/">Read the post &rarr;</a></p>
       </article>
     </div>
   </section>
@@ -316,6 +331,7 @@
     var r = function (t) { return t.split('').reverse().join(''); };
     var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
     a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) a.textContent = addr;
     a.removeAttribute('data-u'); a.removeAttribute('data-d');
   });
 </script>
