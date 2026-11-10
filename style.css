@@ -97,6 +97,41 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
   padding: 0.6rem 1.25rem; border-radius: 999px;
 }
 
+.eco-list li.eco-has-pop { background: none; padding: 0; }
+.eco-btn {
+  font: inherit; font-weight: 600; color: #1f2a18; background: var(--accent);
+  padding: 0.6rem 1.25rem; border: 0; border-radius: 999px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.eco-btn::after {
+  content: "i"; display: inline-grid; place-items: center;
+  width: 1.1em; height: 1.1em; border-radius: 50%;
+  border: 1.5px solid currentColor; font-size: 0.75em; font-weight: 700; font-style: italic;
+}
+.eco-btn:hover { background: var(--accent-strong); }
+.eco-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent-strong); }
+
+/* Popover */
+.pop {
+  width: min(32rem, calc(100vw - 2rem)); max-height: calc(100vh - 2rem); overflow: auto;
+  margin: auto; padding: 1.75rem; color: var(--text); background: var(--bg-elev);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+.pop::backdrop { background: rgba(0, 0, 0, 0.5); }
+.pop h3 { font-size: 1.5rem; margin-bottom: 0.2rem; padding-right: 2rem; }
+.pop p { color: var(--text-muted); }
+.pop .pop-role { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+.pop-close {
+  position: absolute; top: 0.75rem; right: 0.75rem; width: 2.25rem; height: 2.25rem;
+  font: inherit; font-size: 1.5rem; line-height: 1; color: var(--text-muted);
+  background: none; border: 0; border-radius: 50%; cursor: pointer;
+}
+.pop-close:hover { color: var(--text); background: var(--bg-elev-2); }
+.pop-links { list-style: none; padding: 0; margin: 0 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+.pop .btn { margin-top: 0; }
+
 /* Stats */
 .stats { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .stat { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
