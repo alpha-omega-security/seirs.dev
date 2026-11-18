@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>SEIRs — Security Engineers in Residence. An Alpha-Omega initiative.</title>
+  <rect width="1200" height="630" fill="#2f3133"/>
+  <!-- Favicon mark, top right: favicon.svg scaled from 64 to 240 (x3.75) -->
+  <rect x="880" y="78" width="240" height="240" rx="45" fill="#1b1c1e"/>
+  <circle cx="1000" cy="198" r="67.5" fill="#a8d08d"/>
+  <circle cx="1000" cy="198" r="26.25" fill="#1b1c1e"/>
+  <g font-family="Helvetica, Arial, 'Liberation Sans', sans-serif">
+    <image href="alpha-omega-logo.png" xlink:href="alpha-omega-logo.png" x="80" y="78" width="54" height="60"/>
+    <text x="152" y="118" fill="#a8d08d" font-size="24" font-weight="700" letter-spacing="3">AN ALPHA-OMEGA INITIATIVE</text>
+    <text x="74" y="300" fill="#f1f2f0" font-size="168" font-weight="700" letter-spacing="-3">SEIRs</text>
+    <text x="80" y="374" fill="#a8d08d" font-size="50" font-weight="700">Security Engineers in Residence</text>
+    <text x="80" y="446" fill="#b8bbb6" font-size="30">Hands-on security capacity, embedded in</text>
+    <text x="80" y="486" fill="#b8bbb6" font-size="30">the open source ecosystems the world depends on.</text>
+    <text x="80" y="566" fill="#f1f2f0" font-size="26" font-weight="700">www.seirs.dev</text>
+  </g>
+</svg>
