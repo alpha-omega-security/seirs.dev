@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux Kernel — Security Engineers in Residence | Alpha-Omega</title>
+  <meta name="description" content="Security Engineers in Residence for the Linux Kernel ecosystem.">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../">
+    <img class="brand-logo" src="../alpha-omega-logo.png" alt="Alpha-Omega" width="36" height="40">
+    <span class="brand-text">SEIRs</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../#ecosystems">Ecosystems</a>
+    <a href="../#impact">Impact</a>
+    <a href="../#blog">Blog</a>
+    <a href="../role.html">The role</a>
+  </nav>
+</header>
+
+<main class="eco-page">
+
+  <section class="hero eco-hero">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>Linux Kernel</h1>
+    <p class="subtitle">Stewarded by <a href="https://www.linuxfoundation.org/">The Linux Foundation</a></p>
+    <p class="contact-line">Security contact: <a href="https://docs.kernel.org/process/security-bugs.html">docs.kernel.org/process/security-bugs.html</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Security Engineers</h2>
+    <div class="grid grid-3">
+      <p class="section-intro">The Linux Kernel Security Team has decided not to mention its Security Engineers in Residence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+
+  </section>
+
+  <p class="back"><a href="../">&larr; Startpage</a></p>
+
+  <nav class="eco-subnav" aria-label="All ecosystems">
+  <span class="eco-subnav-label">All ecosystems:</span>
+  <ul>
+      <li><a href="drupal.html">Drupal</a></li>
+      <li><a href="eclipse.html">Eclipse</a></li>
+      <li><a href="erlang.html">Erlang / Elixir</a></li>
+      <li><a href="freebsd.html">FreeBSD</a></li>
+      <li><a href="nodejs.html">JavaScript &amp; Node.js</a></li>
+      <li><a href="linux-kernel.html" aria-current="page">Linux Kernel</a></li>
+      <li><a href="ostif.html">OSTIF</a></li>
+      <li><a href="perl.html">Perl / CPAN</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="ruby.html">Ruby</a></li>
+      <li><a href="rust.html">Rust</a></li>
+  </ul>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>SEIRs</strong> is an initiative of <a href="https://alpha-omega.dev">Alpha-Omega</a>. Alpha-Omega protects society by funding and catalyzing sustainable security improvements across open source software. Alpha-Omega is an associated project of the Open Source Security Foundation (OpenSSF).</p>
+    <p>
+      <a href="https://github.com/alpha-omega-security">GitHub</a> ·
+      <a href="https://alpha-omega.dev">alpha-omega.dev</a> ·
+      <a href="#" data-contact data-u="sries" data-d="ved.agemo-ahpla">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Assemble contact addresses at runtime so they are not present as text in the HTML.
+  document.querySelectorAll('[data-contact]').forEach(function (a) {
+    var r = function (t) { return t.split('').reverse().join(''); };
+    var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
+    a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) { a.textContent = addr; }
+    a.removeAttribute('data-u'); a.removeAttribute('data-d');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeBSD — Security Engineers in Residence | Alpha-Omega</title>
+  <meta name="description" content="Security Engineers in Residence for the FreeBSD ecosystem.">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../">
+    <img class="brand-logo" src="../alpha-omega-logo.png" alt="Alpha-Omega" width="36" height="40">
+    <span class="brand-text">SEIRs</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../#ecosystems">Ecosystems</a>
+    <a href="../#impact">Impact</a>
+    <a href="../#blog">Blog</a>
+    <a href="../role.html">The role</a>
+  </nav>
+</header>
+
+<main class="eco-page">
+
+  <section class="hero eco-hero">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>FreeBSD</h1>
+    <p class="subtitle">Stewarded by <a href="https://freebsdfoundation.org/">The FreeBSD Foundation</a></p>
+    <p class="contact-line">Security contact: <a href="#" data-contact data-show data-u="maetces" data-d="gro.dsbeerf"></a></p>
+  </section>
+
+  <section class="section">
+    <h2>Security Engineers</h2>
+    <div class="grid grid-3">
+      <article class="card profile">
+        <img class="profile-img" src="img/freebsd-mark-johnston.jpg" alt="Photo of Mark Johnston" width="96" height="96" loading="lazy">
+        <h3>Mark Johnston</h3>
+        <p>Mark is a long-time FreeBSD user and developer. He has worked on many different parts of the system, and is very interested in techniques for improving the reliability of systems software. He lives in Toronto, Canada, and when not at a computer, enjoys hiking and playing dodgeball on a team with friends.</p>
+        <ul class="profile-links"><li><a href="https://github.com/markjdb">GitHub</a></li></ul>
+      </article>
+      <article class="card profile">
+        <img class="profile-img" src="img/freebsd-pierre-pronchery.jpg" alt="Photo of Pierre Pronchery" width="96" height="96" loading="lazy">
+        <h3>Pierre Pronchery</h3>
+        <p>Pierre has been advising a wide range of customers as IT-Security Consultant for over two decades. His passion for Open Source and more specifically for Operating System development has also led him to become a NetBSD Developer, and more recently to join the FreeBSD Foundation as Security Engineer. In 2026, he also joined the Security Team of the FreeBSD project.</p>
+        <ul class="profile-links"><li><a href="https://github.com/khorben">GitHub</a></li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-intro">Read how the FreeBSD SEIRs are working with the community.</p>
+    <article class="card story featured">
+      <p class="story-eco">Featured story</p>
+  <h3><a href="https://alpha-omega.dev/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/">FreeBSD AI-assisted Vulnerability Discovery Project launch</a></h3>
+  <p>A six-month project to reduce exploitable vulnerabilities in FreeBSD, starting with the kernel, then the base system and ports. AI assists discovery; every patch is written by hand.</p>
+  <p class="story-by">By FreeBSD Foundation</p>
+  <p class="story-more"><a href="https://alpha-omega.dev/blog/freebsd-ai-assisted-vulnerability-discovery-project-launch/">Read the story &rarr;</a></p>
+    </article>
+  </section>
+
+  <p class="back"><a href="../">&larr; Startpage</a></p>
+
+  <nav class="eco-subnav" aria-label="All ecosystems">
+  <span class="eco-subnav-label">All ecosystems:</span>
+  <ul>
+      <li><a href="drupal.html">Drupal</a></li>
+      <li><a href="eclipse.html">Eclipse</a></li>
+      <li><a href="erlang.html">Erlang / Elixir</a></li>
+      <li><a href="freebsd.html" aria-current="page">FreeBSD</a></li>
+      <li><a href="nodejs.html">JavaScript &amp; Node.js</a></li>
+      <li><a href="linux-kernel.html">Linux Kernel</a></li>
+      <li><a href="ostif.html">OSTIF</a></li>
+      <li><a href="perl.html">Perl / CPAN</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="ruby.html">Ruby</a></li>
+      <li><a href="rust.html">Rust</a></li>
+  </ul>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>SEIRs</strong> is an initiative of <a href="https://alpha-omega.dev">Alpha-Omega</a>. Alpha-Omega protects society by funding and catalyzing sustainable security improvements across open source software. Alpha-Omega is an associated project of the Open Source Security Foundation (OpenSSF).</p>
+    <p>
+      <a href="https://github.com/alpha-omega-security">GitHub</a> ·
+      <a href="https://alpha-omega.dev">alpha-omega.dev</a> ·
+      <a href="#" data-contact data-u="sries" data-d="ved.agemo-ahpla">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Assemble contact addresses at runtime so they are not present as text in the HTML.
+  document.querySelectorAll('[data-contact]').forEach(function (a) {
+    var r = function (t) { return t.split('').reverse().join(''); };
+    var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
+    a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) { a.textContent = addr; }
+    a.removeAttribute('data-u'); a.removeAttribute('data-d');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eclipse — Security Engineers in Residence | Alpha-Omega</title>
+  <meta name="description" content="Security Engineers in Residence for the Eclipse ecosystem.">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../">
+    <img class="brand-logo" src="../alpha-omega-logo.png" alt="Alpha-Omega" width="36" height="40">
+    <span class="brand-text">SEIRs</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../#ecosystems">Ecosystems</a>
+    <a href="../#impact">Impact</a>
+    <a href="../#blog">Blog</a>
+    <a href="../role.html">The role</a>
+  </nav>
+</header>
+
+<main class="eco-page">
+
+  <section class="hero eco-hero">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>Eclipse</h1>
+    <p class="subtitle">Stewarded by <a href="https://www.eclipse.org/">Eclipse Foundation</a></p>
+    <p class="contact-line">Security contact: <a href="#" data-contact data-show data-u="ytiruces" data-d="gro.noitadnuof-espilce"></a></p>
+  </section>
+
+  <section class="section">
+    <h2>Security Engineers</h2>
+    <div class="grid grid-3">
+      <article class="card profile">
+        <img class="profile-img" src="img/eclipse-miruna-sandor.jpg" alt="Photo of Miruna Sandor" width="96" height="96" loading="lazy">
+        <h3>Miruna Sandor</h3>
+        <p class="profile-role">Application Security Engineer, AI-Assisted Vulnerability Management</p>
+        <p>Miruna focuses on AI-assisted vulnerability discovery and triage for the Eclipse ecosystem. She has ten years in software development across multiple stacks and technologies, plus experience managing a bug bounty program and incident response. She has a builder mindset and loves converting her ideas into working solutions.</p>
+        <ul class="profile-links"><li><a href="https://github.com/Miru5">GitHub</a></li><li><a href="https://www.linkedin.com/in/miruna1923">LinkedIn</a></li></ul>
+      </article>
+      <article class="card profile">
+        <img class="profile-img" src="img/eclipse-alessia-nardotto.jpg" alt="Photo of Alessia Nardotto" width="96" height="96" loading="lazy">
+        <h3>Alessia Nardotto</h3>
+        <p class="profile-role">Security Analyst, Incident Response &amp; Vulnerability Management</p>
+        <p>Alessia Nardotto is part of the Eclipse Foundation Security Team, helping keep the open source projects hosted at the Eclipse Foundation, and their users, safe. She triages incoming vulnerability reports, coordinates disclosure between security researchers and project maintainers, and guides projects through embargoes and CVE assignment under the Foundation&#x27;s role as a CVE Numbering Authority. With a background in back-end software development in Scala, she enjoys bridging the gap between security requirements and the developers who need to put them into practice.</p>
+        <ul class="profile-links"><li><a href="https://github.com/AleNard">GitHub</a></li><li><a href="https://www.linkedin.com/in/alessianardotto">LinkedIn</a></li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-intro">Read how the Eclipse SEIRs are working with the community.</p>
+    <article class="card story featured">
+      <p class="story-eco">Featured story</p>
+  <h3><a href="https://blogs.eclipse.org/post/mika%C3%ABl-barbero/growing-eclipse-foundation-security-team-meet-ai-moment">Growing the Eclipse Foundation Security Team to Meet the AI Moment</a></h3>
+  <p>The Eclipse Foundation received Alpha-Omega sponsorship to add two AI-focused security roles. The post says AI tools find real vulnerabilities but also generate many low-quality reports, and the roles aim to validate findings and support maintainers without replacing maintainer ownership.</p>
+  <p class="story-by">By Mikaël Barbero, Eclipse Foundation</p>
+  <p class="story-more"><a href="https://blogs.eclipse.org/post/mika%C3%ABl-barbero/growing-eclipse-foundation-security-team-meet-ai-moment">Read the story &rarr;</a></p>
+    </article>
+  </section>
+
+  <p class="back"><a href="../">&larr; Startpage</a></p>
+
+  <nav class="eco-subnav" aria-label="All ecosystems">
+  <span class="eco-subnav-label">All ecosystems:</span>
+  <ul>
+      <li><a href="drupal.html">Drupal</a></li>
+      <li><a href="eclipse.html" aria-current="page">Eclipse</a></li>
+      <li><a href="erlang.html">Erlang / Elixir</a></li>
+      <li><a href="freebsd.html">FreeBSD</a></li>
+      <li><a href="nodejs.html">JavaScript &amp; Node.js</a></li>
+      <li><a href="linux-kernel.html">Linux Kernel</a></li>
+      <li><a href="ostif.html">OSTIF</a></li>
+      <li><a href="perl.html">Perl / CPAN</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="ruby.html">Ruby</a></li>
+      <li><a href="rust.html">Rust</a></li>
+  </ul>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>SEIRs</strong> is an initiative of <a href="https://alpha-omega.dev">Alpha-Omega</a>. Alpha-Omega protects society by funding and catalyzing sustainable security improvements across open source software. Alpha-Omega is an associated project of the Open Source Security Foundation (OpenSSF).</p>
+    <p>
+      <a href="https://github.com/alpha-omega-security">GitHub</a> ·
+      <a href="https://alpha-omega.dev">alpha-omega.dev</a> ·
+      <a href="#" data-contact data-u="sries" data-d="ved.agemo-ahpla">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Assemble contact addresses at runtime so they are not present as text in the HTML.
+  document.querySelectorAll('[data-contact]').forEach(function (a) {
+    var r = function (t) { return t.split('').reverse().join(''); };
+    var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
+    a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) { a.textContent = addr; }
+    a.removeAttribute('data-u'); a.removeAttribute('data-d');
+  });
+</script>
+</body>
+</html>
