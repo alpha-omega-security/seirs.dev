@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSTIF — Security Engineers in Residence | Alpha-Omega</title>
+  <meta name="description" content="Security Engineers in Residence for the OSTIF ecosystem.">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../">
+    <img class="brand-logo" src="../alpha-omega-logo.png" alt="Alpha-Omega" width="36" height="40">
+    <span class="brand-text">SEIRs</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../#ecosystems">Ecosystems</a>
+    <a href="../#impact">Impact</a>
+    <a href="../#blog">Blog</a>
+    <a href="../role.html">The role</a>
+  </nav>
+</header>
+
+<main class="eco-page">
+
+  <section class="hero eco-hero">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>OSTIF</h1>
+    <p class="subtitle">Stewarded by <a href="https://ostif.org">Open Source Technology Improvement Fund, Inc</a></p>
+    <p class="contact-line">Security contact: <a href="#" data-contact data-show data-u="kered" data-d="gro.fitso"></a></p>
+  </section>
+
+  <section class="section">
+    <h2>Security Engineers</h2>
+    <div class="grid grid-3">
+      <article class="card profile">
+        <img class="profile-img" src="img/ostif-derek-zimmer.jpg" alt="Photo of Derek Zimmer" width="96" height="96" loading="lazy">
+        <h3>Derek Zimmer</h3>
+        <p class="profile-role">Executive Director</p>
+        <p>Derek Zimmer is a security researcher and founder of OSTIF.org which is a nonprofit that helps open source maintainers improve the security of their projects through direct guidance, security audits, and improving their security tooling. Responsible for thousands of security fixes over the last eleven years, he works tirelessly to build communities of researchers and maintainers that work together to secure the ecosystems we all rely on every day.</p>
+        <ul class="profile-links"><li><a href="https://www.linkedin.com/in/derek-zimmer-2164a441/">LinkedIn</a></li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-intro">Read how the OSTIF SEIRs are working with the community.</p>
+    <article class="card story featured">
+      <p class="story-eco">Featured story</p>
+  <h3><a href="https://alpha-omega.dev/blog/security-engineer-in-residence-seir-scaling-open-source-security-with-alpha-omega-and-ostif/">Security Engineer in Residence (SEiR): Scaling Open Source Security with Alpha-Omega and OSTIF</a></h3>
+  <p>OSTIF&#x27;s view of the programme and its own contribution, Project V-LAT: a team of six researchers triaging vulnerabilities, working through a backlog of roughly 450 reported issues and helping maintainers with fixes.</p>
+  <p class="story-by">By Helen Woeste, OSTIF</p>
+  <p class="story-more"><a href="https://alpha-omega.dev/blog/security-engineer-in-residence-seir-scaling-open-source-security-with-alpha-omega-and-ostif/">Read the story &rarr;</a></p>
+    </article>
+  </section>
+
+  <p class="back"><a href="../">&larr; Startpage</a></p>
+
+  <nav class="eco-subnav" aria-label="All ecosystems">
+  <span class="eco-subnav-label">All ecosystems:</span>
+  <ul>
+      <li><a href="drupal.html">Drupal</a></li>
+      <li><a href="eclipse.html">Eclipse</a></li>
+      <li><a href="erlang.html">Erlang / Elixir</a></li>
+      <li><a href="freebsd.html">FreeBSD</a></li>
+      <li><a href="nodejs.html">JavaScript &amp; Node.js</a></li>
+      <li><a href="linux-kernel.html">Linux Kernel</a></li>
+      <li><a href="ostif.html" aria-current="page">OSTIF</a></li>
+      <li><a href="perl.html">Perl / CPAN</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="ruby.html">Ruby</a></li>
+      <li><a href="rust.html">Rust</a></li>
+  </ul>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>SEIRs</strong> is an initiative of <a href="https://alpha-omega.dev">Alpha-Omega</a>. Alpha-Omega protects society by funding and catalyzing sustainable security improvements across open source software. Alpha-Omega is an associated project of the Open Source Security Foundation (OpenSSF).</p>
+    <p>
+      <a href="https://github.com/alpha-omega-security">GitHub</a> ·
+      <a href="https://alpha-omega.dev">alpha-omega.dev</a> ·
+      <a href="#" data-contact data-u="sries" data-d="ved.agemo-ahpla">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Assemble contact addresses at runtime so they are not present as text in the HTML.
+  document.querySelectorAll('[data-contact]').forEach(function (a) {
+    var r = function (t) { return t.split('').reverse().join(''); };
+    var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
+    a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) { a.textContent = addr; }
+    a.removeAttribute('data-u'); a.removeAttribute('data-d');
+  });
+</script>
+</body>
+</html>

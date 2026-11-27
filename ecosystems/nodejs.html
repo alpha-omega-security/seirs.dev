@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript and Node.js — Security Engineers in Residence | Alpha-Omega</title>
+  <meta name="description" content="Security Engineers in Residence for the JavaScript and Node.js ecosystem.">
+  <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../">
+    <img class="brand-logo" src="../alpha-omega-logo.png" alt="Alpha-Omega" width="36" height="40">
+    <span class="brand-text">SEIRs</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../#ecosystems">Ecosystems</a>
+    <a href="../#impact">Impact</a>
+    <a href="../#blog">Blog</a>
+    <a href="../role.html">The role</a>
+  </nav>
+</header>
+
+<main class="eco-page">
+
+  <section class="hero eco-hero">
+    <p class="eyebrow">Ecosystem</p>
+    <h1>JavaScript &amp; Node.js</h1>
+    <p class="subtitle">Stewarded by <a href="https://openjsf.org/">OpenJS Foundation</a></p>
+
+  </section>
+
+  <section class="section">
+    <h2>Security Engineers</h2>
+    <div class="grid grid-3">
+      <article class="card profile">
+        <img class="profile-img" src="img/nodejs-ulises-gascon.jpg" alt="Photo of Ulises Gascón" width="96" height="96" loading="lazy">
+        <h3>Ulises Gascón</h3>
+        <p class="profile-role">Node.js Security Engineer in Residence</p>
+        <p>Ulises Gascón is the Alpha-Omega funded Node.js Security Engineer in Residence, a partnership between the OpenJS Foundation and NodeSource. He coordinates CVEs for the OpenJS Foundation CNA, is a Node.js releaser, and is a member of the Express and Lodash technical steering committees.</p>
+        <ul class="profile-links"><li><a href="https://github.com/UlisesGascon">GitHub</a></li><li><a href="https://www.linkedin.com/in/ulisesgascon/">LinkedIn</a></li><li><a href="https://ulisesgascon.com/">Website</a></li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-intro">Read how the JavaScript and Node.js SEIRs are working with the community.</p>
+    <article class="card story featured">
+      <p class="story-eco">Featured story</p>
+  <h3><a href="https://alpha-omega.dev/blog/announcing-the-node-js-ai-security-engineer-in-residence/">Announcing the Node.js AI Security Engineer in Residence</a></h3>
+  <p>The OpenJS Foundation, with NodeSource and Alpha-Omega, funds a SEIR for Node.js: handling AI-generated report volume, AI-assisted patch review, supply-chain incident response and an open-sourced triage skill library.</p>
+  <p class="story-by">By Kylie Wagar-Dirks, OpenJS Foundation</p>
+  <p class="story-more"><a href="https://alpha-omega.dev/blog/announcing-the-node-js-ai-security-engineer-in-residence/">Read the story &rarr;</a></p>
+    </article>
+  </section>
+
+  <p class="back"><a href="../">&larr; Startpage</a></p>
+
+  <nav class="eco-subnav" aria-label="All ecosystems">
+  <span class="eco-subnav-label">All ecosystems:</span>
+  <ul>
+      <li><a href="drupal.html">Drupal</a></li>
+      <li><a href="eclipse.html">Eclipse</a></li>
+      <li><a href="erlang.html">Erlang / Elixir</a></li>
+      <li><a href="freebsd.html">FreeBSD</a></li>
+      <li><a href="nodejs.html" aria-current="page">JavaScript &amp; Node.js</a></li>
+      <li><a href="linux-kernel.html">Linux Kernel</a></li>
+      <li><a href="ostif.html">OSTIF</a></li>
+      <li><a href="perl.html">Perl / CPAN</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="ruby.html">Ruby</a></li>
+      <li><a href="rust.html">Rust</a></li>
+  </ul>
+</nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>SEIRs</strong> is an initiative of <a href="https://alpha-omega.dev">Alpha-Omega</a>. Alpha-Omega protects society by funding and catalyzing sustainable security improvements across open source software. Alpha-Omega is an associated project of the Open Source Security Foundation (OpenSSF).</p>
+    <p>
+      <a href="https://github.com/alpha-omega-security">GitHub</a> ·
+      <a href="https://alpha-omega.dev">alpha-omega.dev</a> ·
+      <a href="#" data-contact data-u="sries" data-d="ved.agemo-ahpla">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Assemble contact addresses at runtime so they are not present as text in the HTML.
+  document.querySelectorAll('[data-contact]').forEach(function (a) {
+    var r = function (t) { return t.split('').reverse().join(''); };
+    var addr = r(a.dataset.u) + '@' + r(a.dataset.d);
+    a.href = 'mailto:' + addr;
+    if (a.hasAttribute('data-show')) { a.textContent = addr; }
+    a.removeAttribute('data-u'); a.removeAttribute('data-d');
+  });
+</script>
+</body>
+</html>
